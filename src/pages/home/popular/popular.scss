@@ -1,0 +1,31 @@
+$color_0: rgb(255, 251, 251);
+$color_1: #f9f9f9;
+$color_2: #646cfff3;
+$color_3: #535bf2;
+$color_4: #213547;
+$color_5: #747bff;
+$font-family_1: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family_2: inherit;
+$background-color_1: #242424;
+$background-color_2: #1a1a1a;
+$background-color_3: #020c1b;
+$background-color_4: #ffffff;
+$background-color_5: #f9f9f9;
+$border-color_1: #646cff;
+
+.carouselSection {
+    position: relative;
+    margin-bottom: 70px;
+    & > .contentWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .carouseTitle {
+            font-size: 22px;
+            color: $color_1;
+            font-weight: normal;
+        }
+    }
+}

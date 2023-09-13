@@ -1,0 +1,132 @@
+@import "../../maxStitic.scss";
+
+$color_0: rgb(255, 251, 251);
+$color_1: #f9f9f9;
+$color_2: #646cfff3;
+$color_3: #535bf2;
+$color_4: #213547;
+$color_5: #747bff;
+$font-family_1: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family_2: inherit;
+$background-color_1: #242424;
+$background-color_2: #1a1a1a;
+$background-color_3: #020c1b;
+$background-color_4: #ffffff;
+$background-color_5: #f9f9f9;
+$border-color_1: #646cff;
+
+.explorePage {
+    min-height: 700px;
+    padding-top: 100px;
+    .resultNotFound {
+        font-size: 24px;
+        color: $color_1;
+    }
+    .pageHeader {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        flex-direction: column;
+        @include md {
+            flex-direction: row;
+        }
+    }
+    .pageTitle {
+        font-size: 24px;
+        line-height: 32px;
+        color: white;
+        
+        margin-bottom: 20px;
+        @include md {
+            margin-bottom: 0;
+        }
+    }
+    .filters {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        @include md {
+            flex-direction: row;
+        }
+        .react-select-container {
+            &.genresDD {
+                color: #616284;
+                width: 100%;
+                @include md {
+                    max-width: 500px;
+                    min-width: 250px;
+                }
+            }
+            &.sortbyDD {
+                width: 100%;
+                flex-shrink: 0;
+                @include md {
+                    width: 250px;
+                }
+            }
+            .react-select__control {
+                border: 0;
+                outline: 0;
+                box-shadow: none;
+                background-color: $background-color_2;
+                border-radius: 16px;
+                .react-select__value-container {
+                    .react-select__placeholder,
+                    .react-select__input-container {
+                        margin: 0 10px;
+                        border: none;
+                        color: $color_5;
+                        // &:hover {
+                        //     background-color: #1a1a1a;
+                        // }
+                    }
+                }
+                .react-select__single-value {
+                    color: $color_1;
+                }
+                .react-select__multi-value {
+                    background-color: $color_2;
+                    padding: 2px;
+                    // background-color: $background-color_3;
+                    border-radius: 8px;
+                    .react-select__multi-value__label {
+                        color: $color_1;
+                    }
+                    .react-select__multi-value__remove {
+                        background-color: $color_2;
+                        color: $color_1;
+                        cursor: pointer;
+                        &:hover {
+                            color: $background-color_1;
+                        }
+                    }
+                }
+            }
+            .react-select__menu {
+                top: 40px;
+                margin: 0;
+                padding: 0;
+                background-color: $background-color_1;
+                color: $color_5;
+                border-radius: 16px;
+            }
+        }
+    }
+    .content {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 10px;
+        margin-bottom: 50px;
+        @include md {
+            gap: 20px;
+        }
+        .movieCard {
+            .posterBlock {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .react-select__indicator-separator {
+        display: none;
+    }
+}

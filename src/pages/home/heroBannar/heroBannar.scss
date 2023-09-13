@@ -1,0 +1,162 @@
+@import '../../../mixins.scss';
+
+$color_0: rgb(255, 251, 251);
+$color_1: #f9f9f9;
+$color_2: #646cfff3;
+$color_3: #535bf2;
+$color_4: #213547;
+$color_5: #747bff;
+$font-family_1: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family_2: inherit;
+$background-color_1: #242424;
+$background-color_2: #1a1a1a;
+$background-color_3: #020c1b;
+$background-color_4: #ffffff;
+$background-color_5: #f9f9f9;
+$border-color_1: #646cff;
+
+:root {
+    font-family: $font-family_1;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    --black: #04152d;
+    --black2: #041226;
+    --black3: #020c1b;
+    --black-lighter: #1c4b91;
+    --black-light: #173d77;
+    --pink: #da2f68;
+    --orange: #f89e00;
+    --gradient: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.heroBannar {
+    width:  100%;
+    height: 550px;
+    background-color: $background-color_2;
+    display: flex;
+    align-items: center;
+    position: relative;
+    @include md {
+        height: 400px;
+    }
+    @include sm {
+        height: 300px;
+    }
+    .backdrop-img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+        overflow: hidden;
+        background-size: cover;
+        .lazy-load-image-background {
+            width: 100%;
+            height: 100%;
+            img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            }
+        }
+    }
+    .opacity-img {
+        width: 100%;
+        height: 250px;
+        background: rgb(36,36,36);
+        background: linear-gradient(180deg, rgba(36,36,36,0) 0%, rgba(9,10,20,1) 56%);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .heroBannar_content {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        z-index: 10;
+    }
+    .title {
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+        font-weight: 700;
+        z-index: 1;
+        color: $color_1;
+        @include md {
+            font-size: 2rem;
+        }
+        @include sm {
+            font-size: 1rem;
+        }
+    }
+    .suptitle {
+        color: $color_1;
+        z-index: 1;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        line-height: 1.5;
+        @include md {
+            font-size: .5rem;
+        }
+        @include sm {
+            
+            font-size: .5rem;
+            max-width: 250px;
+        }
+    }
+    .search_input {
+        display: flex;
+        z-index: 1;
+        margin-top: 2rem;
+        @include sm {
+            margin-top: 0;
+        }
+        input {
+            font-size: 1rem;
+            color: $color_2;
+            z-index: 1;
+            width: 389px;
+            background-color: $background-color_1;
+            padding: .9rem 1rem;
+            border-radius: 1rem 0 0 1rem;
+            outline: none;
+            border: none;
+            @include md {
+                width: 300px;
+            }
+            @include sm {
+                width: 200px;
+            }
+        }
+        button {
+            z-index: 1;
+            color: $color_1;
+            // background-color: $background-color_2;
+            padding: 0rem 1rem;
+            border: none;
+            border-radius: 0 1rem 1rem 0;
+            cursor: pointer;
+            font-size: 1rem;
+            background: #646cff;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #4A00E0, #646cff);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #4A00E0, #646cff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+    }
+}

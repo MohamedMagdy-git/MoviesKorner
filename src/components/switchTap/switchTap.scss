@@ -1,0 +1,60 @@
+
+$color_0: rgb(255, 251, 251);
+$color_1: #f9f9f9;
+$color_2: #646cfff3;
+$color_3: #535bf2;
+$color_4: #213547;
+$color_5: #747bff;
+$font-family_1: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family_2: inherit;
+$background-color_1: #242424;
+$background-color_2: #1a1a1a;
+$background-color_3: #88a1c7;
+$background-color_4: #ffffff;
+$background-color_5: #f9f9f9;
+$border-color_1: #646cff;
+
+.switchingTabs {
+    height: 34px;
+    background-color: $background-color_1;
+    border-radius: 20px;
+    padding: 2px;
+    direction: ltr;
+    .tabItems {
+        display: flex;
+        align-items: center;
+        height: 30px;
+        position: relative;
+        .tabItem {
+            height: 100%;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            color: $color_1;
+            font-size: 16px;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+            cursor: pointer;
+            transition: color ease 0.3s;
+            &.active {
+                color: $color_1;
+            }
+        }
+        .movingBg {
+            height: 30px;
+            width: 100px;
+            border-radius: 15px;
+            // background: $color_2;
+            background: #646cff;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #4A00E0, #646cff);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #4A00E0, #646cff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            position: absolute;
+            left: 0;
+            transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.4s;
+        }
+    }
+}

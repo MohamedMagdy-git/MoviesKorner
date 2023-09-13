@@ -1,0 +1,101 @@
+@import "../../maxStitic.scss";
+
+$color_0: rgb(255, 251, 251);
+$color_1: #f9f9f9;
+$color_2: #646cfff3;
+$color_3: #535bf2;
+$color_4: #213547;
+$color_5: #747bff;
+$font-family_1: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family_2: inherit;
+$background-color_1: #242424;
+$background-color_2: #1a1a1a;
+$background-color_3: #020c1b;
+$background-color_6: #090a14;
+$background-color_4: #ffffff;
+$background-color_5: #f9f9f9;
+$border-color_1: #646cff;
+
+.footer {
+    background-color: $background-color_2;
+    padding: 50px 0;
+    color: white;
+    position: relative;
+    .contentWrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .menuItems {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        @include md {
+            margin-bottom: 30px;
+            gap: 30px;
+        }
+        .menuItem {
+            transition: all ease 0.3s;
+            cursor: pointer;
+            font-size: 12px;
+            @include md {
+                font-size: 16px;
+            }
+            &:hover {
+                color: $color_2;
+            }
+        }
+    }
+    .infoText {
+        font-size: 12px;
+        line-height: 20px;
+        opacity: 0.5;
+        text-align: center;
+        max-width: 800px;
+        margin-bottom: 20px;
+        @include md {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+    }
+    .socialIcons {
+        width: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+        .icon {
+            // width: 50px;
+            // height: 50px;
+            // border-radius: 50%;
+            background-color: $background-color_2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all ease 0.3s;
+            &:hover {
+                // box-shadow: 0 0 0.625em $color_2;
+                color: $color_2;
+            }
+        }
+    }
+    .copyright {
+        text-align: center;
+        margin-top: 1rem;
+        .copyright_text {
+           margin-bottom: .5rem; 
+        }
+        .by {
+            text-decoration: none;
+            color: $color_1;
+        }
+    }
+}
+
+
+// background-color: transparent;
+//     background-image: linear-gradient(270deg,#60c5ff 0,#5c29f2 100%)!important;

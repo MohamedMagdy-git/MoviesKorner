@@ -1,0 +1,175 @@
+@import "../../maxStitic.scss";
+
+
+$color_0: rgb(255, 251, 251);
+$color_1: #f9f9f9;
+$color_2: #646cff;
+$color_3: #535bf2;
+$color_4: #213547;
+$color_5: #747bff;
+$font-family_1: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family_2: inherit;
+$background-color_1: #242424;
+$background-color_2: #1a1a1a;
+$background-color_3: #020c1b;
+$background-color_4: #ffffff;
+$background-color_5: #f9f9f9;
+$border-color_1: #646cff;
+
+.header {
+    // direction: ltr;
+    position: fixed;
+    transform: translateY(0);
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    transition: all ease 0.5s;
+    z-index: 2;
+    &.top {
+        background: rgb(9,10,20);
+        background: linear-gradient(180deg, rgba(9, 10, 20, 0.515) 0%, rgba(36, 36, 36, 0) 100%);
+    }
+    &.show {
+        background: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(3.5px);
+        -webkit-backdrop-filter: blur(3.5px);
+    }
+    &.hide {
+        transform: translateY(-60px);
+    }
+
+    .contentWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo {
+        cursor: pointer;
+        img {
+            height: 46px;
+        }
+    }
+    .menuItems {
+        list-style-type: none;
+        display: none;
+        align-items: center;
+        @include md {
+            display: flex;
+        }
+        .menuItem {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            margin: 0 15px;
+            color: white;
+            font-weight: 500;
+            position: relative;
+            &.searchIcon {
+                margin-right: 0;
+            }
+            svg {
+                font-size: 18px;
+            }
+            cursor: pointer;
+            &:hover {
+                color: $color_2;
+            }
+        }
+    }
+    
+
+    .mobileMenuItems {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include md {
+            display: none;
+        }
+        svg {
+            font-size: 18px;
+            color: white;
+            &:hover {
+                color: $color_2;
+            }
+        }
+    }
+
+    &.mobileView {
+        background: $background-color_1;
+        .menuItems {
+            display: flex;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background: $background-color_2;
+            flex-direction: column;
+            width: 100%;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            animation: mobileMenu 0.3s ease forwards;
+            .menuItem {
+                font-size: 20px;
+                width: 100%;
+                height: auto;
+                padding: 15px 20px;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .searchBar {
+        width: 100%;
+        height: 60px;
+        background-color: $background-color_1;
+        position: absolute;
+        top: 60px;
+        animation: mobileMenu 0.3s ease forwards;
+        .searchInput {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            margin-top: 10px;
+            width: 100%;
+            .close {
+                font-size: 30px;
+                flex-shrink: 0;
+                margin-left: 10px;
+                cursor: pointer;
+                color: $color_2;
+            }
+            input {
+                width: 100%;
+                height: 50px;
+                color: $color_2;
+                background-color: $background-color_1;
+                outline: 0;
+                border: 0;
+                border-radius: 30px 0 0 30px;
+                padding: 0 15px;
+                font-size: 14px;
+                @include md {
+                    height: 60px;
+                    font-size: 20px;
+                    padding: 0 30px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes mobileMenu {
+    0% {
+        transform: translateY(-15%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

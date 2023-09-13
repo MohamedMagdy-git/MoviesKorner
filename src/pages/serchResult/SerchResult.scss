@@ -1,0 +1,59 @@
+@import "../../maxStitic.scss";
+
+$color_0: rgb(255, 251, 251);
+$color_1: #f9f9f9;
+$color_2: #646cfff3;
+$color_3: #535bf2;
+$color_4: #213547;
+$color_5: #747bff;
+$font-family_1: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family_2: inherit;
+$background-color_1: #242424;
+$background-color_2: #1a1a1a;
+$background-color_3: #020c1b;
+$background-color_4: #ffffff;
+$background-color_5: #f9f9f9;
+$border-color_1: #646cff;
+
+.contaner_noResult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.search_Keyword {
+    color: $color_2;
+}
+.searchResultsPage {
+    min-height: 700px;
+    padding-top: 100px;
+    .resultNotFound {
+        font-size: 24px;
+        line-height: 32px;
+        color: $color_1;
+        text-align: center;
+    }
+    .noResultPh{
+        width: 150px;
+    }
+    .pageTitle {
+        font-size: 24px;
+        line-height: 32px;
+        color: white;
+        margin-bottom: 24px;
+    }
+    .content {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 10px;
+        margin-bottom: 48px;
+        @include md {
+            gap: 20px;
+        }
+        .movieCard {
+            .posterBlock {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

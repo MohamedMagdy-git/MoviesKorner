@@ -1,0 +1,286 @@
+@import "../../../maxStitic.scss";
+
+$color_1: rgba(255, 255, 255, 0.87);
+$color_2: #646cff;
+$color_3: #535bf2;
+$color_4: #213547;
+$color_5: #747bff;
+$color_6: #cccfff;
+$font-family_1: 'Cairo', sans-serif, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family_2: inherit;
+$background-color_1: #242424;
+$background-color_2: #1a1a1a;
+$background-color_3: #ffffff;
+$background-color_4: #f9f9f9;
+$background-color_5: #090a14;
+$border-color_1: #646cff;
+
+.detailsBanner {
+    width: 100%;
+    background-color: $background-color_5;
+    padding-top: 100px;
+    margin-bottom: 50px;
+    @include md {
+        margin-bottom: 0;
+        padding-top: 120px;
+        min-height: 700px;
+    }
+    .backdrop-img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+        overflow: hidden;
+        .lazy-load-image-background {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+    .opacity-layer {
+        width: 100%;
+        height: 250px;
+        background: linear-gradient(
+            180deg,
+            rgba(4, 21, 45, 0) 0%,
+            #090a14 79.17%
+        );
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .content {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        gap: 25px;
+        @include md {
+            gap: 48px;
+            flex-direction: row;
+        }
+        .left {
+            flex-shrink: 0;
+            .posterImg {
+                max-width: 180px;
+                display: block;
+                border-radius: 16px;
+                @include md {
+                    max-width: 220px;
+                }
+            }
+        }
+        .right {
+            color: white;
+            .title {
+                font-size: 24px;
+                line-height: 32px;
+                font-weight: 800;
+                @include md {
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+            }
+            .subtitle {
+                margin-top: 8px;
+                font-size: 14px;
+                line-height: 16px;
+                margin-bottom: 16px;
+                font-style: italic;
+                opacity: 0.8;
+                
+                @include md {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+            .genress {
+                position: relative;
+                width: 100%;
+                flex-direction: row;
+                gap: 1rem;
+                display: flex;
+                margin-right: 4px;
+                margin-top: 4px;
+                transition: .3s ease;
+                margin-bottom: 2rem;
+                .genree {
+                    z-index: 1;
+                    background-color:#646cff74;
+                    padding: 3px;
+                    border-radius: 6px;
+                    width: fit-content;
+                    color: $color_6;
+                    font-size: 1rem;
+                    white-space: nowrap;
+                }
+            }
+            .overview {
+                margin-bottom: 24px;
+                .heading {
+                    font-size: 24px;
+                    margin-bottom: 14px;
+                    width: min-content;
+                }
+                .description {
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 700;
+                    background-color: #747bff5e;
+                    width: fit-content;
+                    border-radius: 6px;
+                    text-align: center;
+                    color: #ebecff;
+                    // max-width: 650px;
+        
+                    // padding-right: 5px;
+                    @include md {
+                        // margin-right: 100px;
+                        font-size: 20px;
+                        line-height: 30px;
+                        padding-right: 10px;
+                        border-right: 3px solid $color_2;
+                        border-radius: 6px;
+                    }
+                }
+            }
+            .circleRating {
+                max-width: 40px;
+                background-color: #646cff74;
+                @include md {
+                    max-width: 48px;
+                }
+                .CircularProgressbar-text {
+                    fill: $color_6;
+                }
+            }
+            .playbtn {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                cursor: pointer;
+                svg {
+                    width: 40px;
+                    @include md {
+                        width: 48px;
+                    }
+                }
+                .text {
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 600;
+                    transition: all 0.7s ease-in-out;
+                }
+                .triangle {
+                    stroke-dasharray: 240;
+                    stroke-dashoffset: 480;
+                    stroke: white;
+                    transform: translateY(0);
+                    transition: all 0.7s ease-in-out;
+                }
+                .circle {
+                    stroke: white;
+                    stroke-dasharray: 650;
+                    stroke-dashoffset: 1300;
+                    transition: all 0.5s ease-in-out;
+                }
+                &:hover {
+                    .text {
+                        color: $color_5;
+                    }
+                    .triangle {
+                        stroke-dashoffset: 0;
+                        opacity: 1;
+                        stroke: $color_6;
+                        animation: trailorPlay 0.7s ease-in-out;
+                    }
+                    .circle {
+                        stroke-dashoffset: 0;
+                        stroke: $color_2;
+                    }
+                }
+            }
+            .row {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                margin-bottom: 24px;
+            }
+
+            .info {
+                // border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 16px 0;
+                display: flex;
+                .infoItem {
+                    // margin-right: 14px;
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .text {
+                    margin-right: 14px;
+                    opacity: 0.6;
+                    line-height: 16px;
+                    font-size: 12px;
+                    @include md {
+                        font-size: 16px;
+                    }
+                    &.bold {
+                        font-weight: 600;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .detailsBannerSkeleton {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        gap: 24px;
+        @include md {
+            gap: 48px;
+            flex-direction: row;
+        }
+        .contentWrapper {
+            display: flex;
+            gap: 48px;
+        }
+        .left {
+            flex-shrink: 0;
+            width: 100%;
+            display: block;
+            border-radius: 14px;
+            aspect-ratio: 1/1.5;
+            @include md {
+                max-width: 350px;
+            }
+        }
+        .right {
+            width: 100%;
+            .row {
+                width: 100%;
+                height: 25px;
+                margin-bottom: 20px;
+                border-radius: 50px;
+                &:nth-child(2) {
+                    width: 75%;
+                    margin-bottom: 50px;
+                }
+                &:nth-child(5) {
+                    width: 50%;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}

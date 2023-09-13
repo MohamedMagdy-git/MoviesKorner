@@ -1,0 +1,56 @@
+@import '../../maxStitic.scss';
+$grey: #343434;
+$red: #F04F54;
+$green: #43CB9D;
+
+$color_1: rgba(255, 255, 255, 0.87);
+$color_2: #646cff;
+$color_3: #535bf2;
+$color_4: #213547;
+$color_5: #747bff;
+$color_6: #cccfff;
+$font-family_1: 'Cairo', sans-serif, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family_2: inherit;
+$background-color_1: #242424;
+$background-color_2: #1a1a1a;
+$background-color_3: #ffffff;
+$background-color_4: #f9f9f9;
+$background-color_5: #090a14;
+$border-color_1: #646cff;
+
+.pageNotFound {
+    background-color: $background-color_1;
+    height: 700px;
+    padding-top: 200px;
+    .contentWrapper {
+        text-align: center;
+        color: $color_5;
+        display: flex;
+        flex-direction: column;
+        .bigText {
+            font-size: 100px;
+            font-weight: 700;
+            @include md {
+                font-size: 150px;
+                font-weight: 700;
+            }
+        }
+        .smallText {
+            font-size: 24px;
+            color: $color_1;
+            @include md {
+                font-size: 44px;
+            }
+        }
+        .back_Home {
+            margin-top: 24px;
+            cursor: pointer;
+            font-size: 16px;
+            color: $background-color_3;
+            @include md {
+                font-size: 32px;
+            }
+        }
+
+    }
+}
