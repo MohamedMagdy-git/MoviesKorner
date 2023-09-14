@@ -32,7 +32,7 @@ $border-color_1: #646cff;
         background: linear-gradient(180deg, rgba(9, 10, 20, 0.515) 0%, rgba(36, 36, 36, 0) 100%);
     }
     &.show {
-        background: rgba(0, 0, 0, 0.25);
+        background: #4a00e0e3;
         backdrop-filter: blur(3.5px);
         -webkit-backdrop-filter: blur(3.5px);
     }
