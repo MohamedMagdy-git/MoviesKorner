@@ -48,7 +48,11 @@ $border-color_1: #646cff;
     .logo {
         cursor: pointer;
         img {
-            height: 46px;
+            height: 20px;
+            width: 100%;
+            @include md {
+                height: 40px;
+            }
         }
     }
     .menuItems {
@@ -70,7 +74,7 @@ $border-color_1: #646cff;
                 margin-right: 0;
             }
             svg {
-                font-size: 18px;
+                font-size: 16px;
             }
             cursor: pointer;
             &:hover {
