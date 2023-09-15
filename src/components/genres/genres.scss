@@ -1,3 +1,5 @@
+@import '../../maxStitic.scss';
+
 $color_0: rgb(255, 251, 251);
 $color_1: #f9f9f9;
 $color_2: #646cfff3;
@@ -14,16 +16,21 @@ $background-color_5: #f9f9f9;
 $border-color_1: #646cff;
 
 .genres {
-    width: 100%;
+    width: min-content;
     position: absolute;
     z-index: 1;
     display: flex;
     flex-direction: row;
+    flex-wrap:  wrap;
     gap: 6px;
     // left: 2px;
     margin-right: 4px;
     margin-top: 4px;
     transition: .3s ease;
+
+    @include md {
+
+    }
     .genre{
         z-index: 1;
         background-color:#646cff74;

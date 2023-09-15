@@ -159,6 +159,7 @@ $border-color_1: #646cff;
                 }
                 .genres {
                     // display: block;
+                    flex-wrap: wrap;
                     @include md {
                         display: flex;
                         flex-flow: wrap;
