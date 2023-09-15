@@ -19,7 +19,7 @@ import VideoPopup from "../../../components/videoPopup/VideoPopup";
 const DetailsBanner = ({video, crew, rate}) => {
 
     const {mediaType, id} = useParams()
-    const {data, loading} = useFetch(`/${mediaType}/${id}?language=ar`)
+    const {data, loading} = useFetch(`/${mediaType}/${id}?language=ar&include_adult=false`)
     
 
     const [show, setShow] = useState(false);
@@ -130,16 +130,16 @@ const DetailsBanner = ({video, crew, rate}) => {
                                 </div>
 
 
-                                <div className="info">
-
                                 {data?.original_title && (
-                                        <div className="infoItem">
-                                            <span className="text bold">
+                                        
+                                            <span className="text bolder without-wrap">
                                                 {data?.original_title}
                                             </span>
                                         
-                                        </div>
+                                       
                                     )}
+                                <div className="info">
+
 
                                     {data?.release_date && (
                                         <div className="infoItem">

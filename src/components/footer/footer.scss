@@ -88,10 +88,12 @@ $border-color_1: #646cff;
         margin-top: 1rem;
         .copyright_text {
            margin-bottom: .5rem; 
+           font-size: 10px;
         }
         .by {
             text-decoration: none;
             color: $color_1;
+            font-size: 10px;
         }
     }
 }
