@@ -121,6 +121,14 @@ const DetailsBanner = ({video, crew, rate}) => {
                                         </span>
                                     </div>
                                 </div>
+                                {data?.original_title && (
+                                        
+                                            <span className="text bolder without-wrap">
+                                                {data?.original_title}
+                                            </span>
+                                        
+                                       
+                                    )}
                                 
                                 <div className="overview">
                                     {/* <div className="heading">القصة:</div> */}
@@ -130,14 +138,6 @@ const DetailsBanner = ({video, crew, rate}) => {
                                 </div>
 
 
-                                {data?.original_title && (
-                                        
-                                            <span className="text bolder without-wrap">
-                                                {data?.original_title}
-                                            </span>
-                                        
-                                       
-                                    )}
                                 <div className="info">
 
 
