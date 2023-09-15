@@ -9,7 +9,7 @@ import Carousel from '../../../components/carousel/Carousel'
 
 const Trending = () => {
   const [endPoint, SetEendPoint] = useState('week')
-  const {data, loading} = useFetch(`/trending/movie/${endPoint}?language=ar&include_adult=false&page=1`)
+  const {data, loading} = useFetch(`/trending/all/${endPoint}?language=ar&include_adult=false&page=1`)
 
   const onTapChange = (tab) => {
     SetEendPoint(tab === 'أسبوع' ? 'week' : 'day')
