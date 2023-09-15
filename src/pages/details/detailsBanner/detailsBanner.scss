@@ -61,7 +61,7 @@ $border-color_1: #646cff;
         display: flex;
         position: relative;
         flex-direction: column;
-        gap: 25px;
+        gap: 8px;
         @include md {
             gap: 48px;
             flex-direction: row;
@@ -69,7 +69,7 @@ $border-color_1: #646cff;
         .left {
             flex-shrink: 0;
             .posterImg {
-                max-width: 180px;
+                max-width: 120px;
                 display: block;
                 border-radius: 16px;
                 @include md {
@@ -80,7 +80,7 @@ $border-color_1: #646cff;
         .right {
             color: white;
             .title {
-                font-size: 24px;
+                font-size: 18px;
                 line-height: 32px;
                 font-weight: 800;
                 @include md {
@@ -211,7 +211,7 @@ $border-color_1: #646cff;
                 display: flex;
                 align-items: center;
                 gap: 24px;
-                margin-bottom: 24px;
+                margin-bottom: 18px;
             }
 
             .info {
@@ -220,10 +220,21 @@ $border-color_1: #646cff;
                 display: flex;
                 .infoItem {
                     // margin-right: 14px;
+                    width: 100%;
+                    line-height: 20px;
                     display: flex;
-                    flex-flow: row wrap;
-                    align-items: center;
-                    justify-content: center;
+                    flex-direction: row;
+                    // flex-flow: row wrap;
+                    align-items: self-start;
+                    justify-content: flex-start;
+                    @include md {
+                        width: auto;
+                        display: flex;
+                        
+                        flex-flow: row wrap;
+                        align-items: center;
+                        justify-content: center;
+                    }
                     .without-wrap{
                         flex-flow: nowrap;
                     }
@@ -232,7 +243,7 @@ $border-color_1: #646cff;
                     margin-right: 14px;
                     opacity: 0.6;
                     line-height: 16px;
-                    font-size: 12px;
+                    font-size: 10px;
                     @include md {
                         font-size: 16px;
                     }

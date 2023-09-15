@@ -196,7 +196,16 @@ const DetailsBanner = ({video, crew, rate}) => {
                                         </span>
                                         </div>
                                         
-                                        <div className="infoItem">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                )}
+                            
+
+                                <div className="info">
+                                <div className="infoItem">
                                         <span className="text bold"> 
                                                 اللغة:{' '}
                                         </span>
@@ -215,12 +224,7 @@ const DetailsBanner = ({video, crew, rate}) => {
                                             
                                         </span>
                                         </div>
-                                        
-                                    </div>
-                                )}
-                            
-
-                                
+                                </div>
 
                             </div>
                            
