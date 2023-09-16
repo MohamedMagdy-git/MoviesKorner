@@ -66,7 +66,9 @@ const Carousel = ({data, loading, endPoint, title}) => {
 
             {!loading ? <div className="carouselItems" ref={carouselContainer}>
                 {data?.map((item) => {
-                    if (item.id === 865463 || item.id ===826960 || item.id ===884605 || item.id === 85552  || item.id === 81356){return;}
+                    if (item.id === 865463 || item.id ===826960 || item.id ===884605 || item.id === 85552  || item.id === 81356
+                        || item.id === 654374 || item.id === 654374 || item.id === 537915 || item.id === 664413 || item.id === 664413
+                        || item.id === 744275 || item.id === 613504){return;}
                     const posterUrl = item.poster_path ? url.poster + item.poster_path : PosterFallback;
                    return(
                    <div key={item.id}
