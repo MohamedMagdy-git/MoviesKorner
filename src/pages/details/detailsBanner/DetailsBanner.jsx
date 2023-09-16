@@ -74,9 +74,9 @@ const DetailsBanner = ({video, crew, rate}) => {
                     <div>
                         <div className="backdrop-img">
                             <Img src={url.backdrop+data?.backdrop_path} alt=''/>
+                             <div className="opacity-layer"></div>
                         </div>
                     </div>
-                    <div className="opacity-layer"></div>
 
                     <ContentWrapper>
                         <div className="content">
@@ -103,7 +103,9 @@ const DetailsBanner = ({video, crew, rate}) => {
 
                                 <div className="genress">
                                  {_gener}
-                                </div>           
+                                </div>       
+
+
                                 
                                 
                          
@@ -121,21 +123,9 @@ const DetailsBanner = ({video, crew, rate}) => {
                                         </span>
                                     </div>
                                 </div>
-                                {data?.original_title && (
-                                        
-                                            <span className="text bolder without-wrap">
-                                                {data?.original_title}
-                                            </span>
-                                        
-                                       
-                                    )}
                                 
-                                <div className="overview">
-                                    {/* <div className="heading">القصة:</div> */}
-                                    <div className="description">
-                                        {data?.overview}
-                                    </div>
-                                </div>
+                                
+                                
 
 
                                 <div className="info">
@@ -225,6 +215,23 @@ const DetailsBanner = ({video, crew, rate}) => {
                                         </span>
                                         </div>
                                 </div>
+
+                                {data?.original_title && (
+                                        
+                                        <span className="text bolder without-wrap">
+                                            {data?.original_title}
+                                        </span>
+                                    
+                                   
+                                )}    
+                            
+
+                            <div className="overview">
+                                {/* <div className="heading">القصة:</div> */}
+                                <div className="description">
+                                    {data?.overview}
+                                </div>
+                            </div>
 
                             </div>
                            

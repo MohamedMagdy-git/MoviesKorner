@@ -47,7 +47,7 @@ const VideosSection = ({ data, loading }) => {
             className="carouselRighttNav arrow"
             onClick={() => Navigation('right')}/> */}
 
-                <div className="sectionHeading">Official Videos</div>
+                <div className="sectionHeading">فديوهات</div>
                 {!loading ? (
                     <div className="videos" ref={carouselContainer}>
                         {data?.map((video, index) => (

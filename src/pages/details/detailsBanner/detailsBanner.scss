@@ -18,21 +18,24 @@ $border-color_1: #646cff;
 .detailsBanner {
     width: 100%;
     background-color: $background-color_5;
-    padding-top: 100px;
-    margin-bottom: 50px;
+    padding-top: 50px;
+    margin-bottom: 40px;
     @include md {
         margin-bottom: 0;
-        padding-top: 120px;
+        padding-top: 70px;
         min-height: 700px;
     }
     .backdrop-img {
         width: 100%;
-        height: 100%;
+        // height: 100%;
         position: absolute;
         top: 0;
         left: 0;
-        opacity: 0.5;
+        opacity: 1;
         overflow: hidden;
+        @include md {
+            opacity: 0.5;
+        }
         .lazy-load-image-background {
             width: 100%;
             height: 100%;
@@ -50,7 +53,7 @@ $border-color_1: #646cff;
         background: linear-gradient(
             180deg,
             rgba(4, 21, 45, 0) 0%,
-            #090a14 79.17%
+            #090a14 90.17%
         );
         position: absolute;
         bottom: 0;
@@ -69,7 +72,7 @@ $border-color_1: #646cff;
         .left {
             flex-shrink: 0;
             .posterImg {
-                max-width: 120px;
+                max-width: 100px;
                 display: block;
                 border-radius: 16px;
                 @include md {
@@ -80,24 +83,26 @@ $border-color_1: #646cff;
         .right {
             color: white;
             .title {
-                font-size: 18px;
+                font-size: 24px;
                 line-height: 32px;
-                font-weight: 800;
+                font-weight: 900;
+                margin-bottom: 16px;
                 @include md {
-                    font-size: 32px;
+                    font-size: 40px;
                     line-height: 40px;
                 }
             }
             .subtitle {
                 margin-top: 8px;
-                font-size: 14px;
-                line-height: 16px;
+                font-size: 18px;
+                line-height: 24px;
                 margin-bottom: 16px;
+                font-weight: 600;
                 font-style: italic;
                 opacity: 0.8;
                 
                 @include md {
-                    font-size: 16px;
+                    font-size: 20px;
                     line-height: 20px;
                 }
             }
@@ -130,21 +135,23 @@ $border-color_1: #646cff;
                     width: min-content;
                 }
                 .description {
-                    font-size: 14px;
-                    line-height: 22px;
+                    border-top: 3px solid #747bff;
+                    font-size: 16px;
+                    line-height: 26px;
                     font-weight: 700;
                     background-color: #747bff56;
                     width: fit-content;
                     border-radius: 6px;
                     text-align: center;
                     color: #ebecff;
+                    padding: 5px;
                     // max-width: 650px;
         
                     // padding-right: 5px;
                     @include md {
                         // margin-right: 100px;
-                        font-size: 20px;
-                        line-height: 30px;
+                        font-size: 24px;
+                        line-height: 38px;
                         padding-right: 10px;
                         // border-top: 2px solid $color_2;
                         border-radius: 6px;
@@ -175,7 +182,7 @@ $border-color_1: #646cff;
                 .text {
                     font-size: 16px;
                     line-height: 24px;
-                    font-weight: 600;
+                    font-weight: 700;
                     transition: all 0.7s ease-in-out;
                 }
                 .triangle {
@@ -216,12 +223,12 @@ $border-color_1: #646cff;
 
             .info {
                 // border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                padding: 16px 0;
+                padding: 14px 0;
                 display: flex;
                 .infoItem {
                     // margin-right: 14px;
                     width: 100%;
-                    line-height: 20px;
+                    line-height: 24px;
                     display: flex;
                     flex-direction: row;
                     // flex-flow: row wrap;
@@ -241,13 +248,14 @@ $border-color_1: #646cff;
                 .text {
                     margin-right: 14px;
                     opacity: 0.6;
-                    line-height: 16px;
-                    font-size: 10px;
+                    line-height: 28px;
+                    font-size: 14px;
                     @include md {
-                        font-size: 16px;
+                        font-size: 18px;
                     }
                     &.bold {
-                        font-weight: 600;
+                        color: $color_1;
+                        font-weight: 700;
                         opacity: 1;
                     }
                    
@@ -263,8 +271,10 @@ $border-color_1: #646cff;
             opacity: 1;
             direction: ltr;
             text-align: center ;
+            opacity: .8;
             @include md {
                 text-align: start;
+                direction: rtl;
             }
         }
     }

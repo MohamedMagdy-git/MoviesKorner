@@ -20,12 +20,13 @@ $border-color_1: #646cff;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 20px;
+        margin-bottom: 24px !important;
 
         .carouseTitle {
             font-size: 22px;
             color: $color_1;
-            font-weight: normal;
+            margin: 0px ;
+            font-weight: 700 !important;
         }
     }
 }

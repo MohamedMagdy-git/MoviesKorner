@@ -32,7 +32,10 @@ $border-color_1: #646cff;
         background: linear-gradient(180deg, rgba(9, 10, 20, 0.515) 0%, rgba(36, 36, 36, 0) 100%);
     }
     &.show {
-        background: #4a00e0e3;
+        // background: #4a00e0e3;
+        background: #646cffac;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #4A00E0, #646cff);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #4b00e0c9, #646cffc7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         backdrop-filter: blur(3.5px);
         -webkit-backdrop-filter: blur(3.5px);
     }
@@ -78,7 +81,7 @@ $border-color_1: #646cff;
             }
             cursor: pointer;
             &:hover {
-                color: $color_2;
+                color: $color_4;
             }
         }
     }
@@ -92,7 +95,7 @@ $border-color_1: #646cff;
             display: none;
         }
         svg {
-            font-size: 18px;
+            font-size: 18px !important;
             color: white;
             &:hover {
                 color: $color_2;
@@ -101,13 +104,20 @@ $border-color_1: #646cff;
     }
 
     &.mobileView {
-        background: $background-color_1;
+        background: #646cffac;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #4A00E0, #646cff);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #4b00e0, #646cff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
         .menuItems {
             display: flex;
             position: absolute;
             top: 60px;
             left: 0;
-            background: $background-color_2;
+            background: #646cffac;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #4A00E0, #646cff);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #4b00e0, #646cff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            backdrop-filter: blur(3.5px);
+            -webkit-backdrop-filter: blur(3.5px);
             flex-direction: column;
             width: 100%;
             padding: 20px 0;
