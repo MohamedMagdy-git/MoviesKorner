@@ -20,7 +20,7 @@ const DetailsBanner = ({video, crew, rate}) => {
 
     const {mediaType, id} = useParams()
     const {data, loading} = useFetch(`/${mediaType}/${id}?language=ar&include_adult=false`)
-    
+    console.log(data);
 
     const [show, setShow] = useState(false);
     const [videoId, setVideoId] = useState(null)
@@ -130,14 +130,25 @@ const DetailsBanner = ({video, crew, rate}) => {
 
                                 <div className="info">
 
-
-                                    {data?.release_date && (
+                                {data?.last_air_date && (
                                         <div className="infoItem">
                                             <span className="text bold">
                                                 تاريخ الانتاج:{' '}
                                             </span>
                                             <span className="text">
-                                                {data?.release_date} 
+                                                { dayjs(data?.first_air_date).format("YYYY لـ") + dayjs(data?.last_air_date).format("YYYY")} 
+                                            </span>
+                                        </div>
+                                    )}
+
+
+                                    {data?.release_date  && (
+                                        <div className="infoItem">
+                                            <span className="text bold">
+                                                تاريخ الانتاج:{' '}
+                                            </span>
+                                            <span className="text">
+                                                {dayjs(data?.release_date).format("YYYY")} 
                                             </span>
                                         </div>
                                     )}
@@ -192,12 +203,40 @@ const DetailsBanner = ({video, crew, rate}) => {
                                         
                                     </div>
                                 )}
+
+                                {data?.number_of_seasons && (
+                                    <div className="info">
+                                        <div className="infoItem">
+                                            <span className="text bold">
+                                                 
+                                                 الموسم:{' '} 
+                                            </span>
+                                            <span className="text">
+                                                {data?.number_of_seasons} 
+                                            </span>
+                                        </div>
+
+                                        {data?.number_of_seasons && (
+                                   
+                                        <div className="infoItem">
+                                            <span className="text bold">
+                                                 
+                                                 الحلقات:{' '} 
+                                            </span>
+                                            <span className="text">
+                                                {data?.number_of_episodes} 
+                                            </span>
+                                        </div>
+                                    
+                                )}
+                                    </div>
+                                )}
                             
 
                                 <div className="info">
                                 <div className="infoItem">
                                         <span className="text bold"> 
-                                                اللغة:{' '}
+                                                اللغــة:{' '}
                                         </span>
                                         <span className="text">
                                            
@@ -214,16 +253,58 @@ const DetailsBanner = ({video, crew, rate}) => {
                                             
                                         </span>
                                         </div>
+                                        <div className="infoItem">
+                                        <span className="text bold"> 
+                                                النــوع:{' '}
+                                        </span>
+                                        <span className="text">
+                                           {mediaType}
+                                            {// data?.original_language} 
+                                            }
+                                            
+                                            {/* {languages.map((lan, index) => {
+                                                if (lan.code !== data?.original_language) {return;}
+                                                return(
+
+                                                    <span key={index}>{lan.name}</span>
+                                                )
+                                                })} */}
+                                            
+                                        </span>
+                                        </div>
                                 </div>
 
-                                {data?.original_title && (
-                                        
-                                        <span className="text bolder without-wrap">
-                                            {data?.original_title}
+                                {data?.original_name && (
+                                    <div className="info">
+                                        <div className="infoItem">
+                                        <span className="text bold"> 
+                                                الاسم:{' '}
                                         </span>
+                                        <span className="text ">
+                                            { data?.original_name}
+                                        </span>
+                                        </div>
+                                    </div>
+                                        
                                     
                                    
-                                )}    
+                                )}
+
+                                {data?.original_title && (
+                                    <div className="info">
+                                        <div className="infoItem">
+                                        <span className="text bold"> 
+                                                الاسم:{' '}
+                                        </span>
+                                        <span className="text ">
+                                            {data?.original_title }
+                                        </span>
+                                        </div>
+                                    </div>
+                                        
+                                    
+                                   
+                                )}  
                             
 
                             <div className="overview">
