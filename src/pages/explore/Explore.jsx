@@ -145,7 +145,7 @@ const Explore = () => {
                                 {data?.results?.map((item, index) => {
                                      if (item.id === 865463 || item.id ===826960 || item.id ===884605 || item.id === 85552  || item.id === 81356
                                         || item.id === 654374 || item.id === 654374 || item.id === 537915 || item.id === 664413 || item.id === 664413
-                                        || item.id === 744275 || item.id === 613504 || item.id === 249397){return;}
+                                        || item.id === 744275 || item.id === 613504 || item.id === 249397 || item.id === 337167){return;}
                                     if (item.media_type === "person") return;
                                     return (
                                         <MovieCard
