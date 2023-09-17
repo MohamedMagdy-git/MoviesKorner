@@ -29,6 +29,7 @@ $border-color_1: #646cff;
     .backdrop-img {
         width: 100%;
         // height: 100%;
+        min-height: 100px;
         position: absolute;
         top: 0;
         left: 0;
@@ -51,6 +52,7 @@ $border-color_1: #646cff;
     .opacity-layer {
         width: 100%;
         height: 250px;
+        min-height: 400px;
         background: linear-gradient(
             180deg,
             rgba(4, 21, 45, 0) 0%,
@@ -72,24 +74,32 @@ $border-color_1: #646cff;
         }
         .left {
             flex-shrink: 0;
+            align-self: center;
+            @include md {
+                align-self: auto;
+            }
             .posterImg {
-                max-width: 100px;
+                max-width: 80px;
                 display: block;
                 border-radius: 16px;
                 @include md {
-                    max-width: 220px;
+                    max-width: 250px;
                 }
             }
         }
         .right {
             color: white;
             .title {
-                font-size: 24px;
+                width: 100%;
+                text-align: center;
+                font-size: 20px;
                 line-height: 32px;
                 font-weight: 900;
                 margin-bottom: 8px;
                 @include md {
-                    font-size: 40px;
+                    width: auto;
+                    text-align: right;
+                    font-size: 30px;
                     line-height: 40px;
                 }
             }
@@ -101,8 +111,10 @@ $border-color_1: #646cff;
                 font-weight: 600;
                 font-style: italic;
                 opacity: 0.8;
+                text-align: center;
                 
                 @include md {
+                    text-align: right;
                     font-size: 20px;
                     line-height: 20px;
                 }
@@ -112,11 +124,15 @@ $border-color_1: #646cff;
                 width: 100%;
                 flex-direction: row;
                 gap: 1rem;
+                justify-content: center;
                 display: flex;
                 margin-right: 4px;
                 margin-top: 4px;
                 transition: .3s ease;
                 margin-bottom: 2rem;
+                @include md {
+                    justify-content: right;
+                }
                 .genree {
                     z-index: 1;
                     background: $background-color_1;  
@@ -132,13 +148,14 @@ $border-color_1: #646cff;
             }
             .overview {
                 margin-bottom: 24px;
+                margin-top: 12px;
                 .heading {
                     font-size: 24px;
                     margin-bottom: 14px;
                     width: min-content;
                 }
                 .description {
-                    border-right: 5px solid #f9f9f9;
+                    // border-right: 5px solid #f9f9f9;
                     font-size: 16px;
                     line-height: 24px;
                     font-weight: 700;
@@ -183,7 +200,7 @@ $border-color_1: #646cff;
                     }
                 }
                 .text {
-                    font-size: 20px;
+                    font-size: 12px;
                     line-height: 24px;
                     font-weight: 700;
                     transition: all 0.7s ease-in-out;
@@ -220,13 +237,17 @@ $border-color_1: #646cff;
             .row {
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 gap: 24px;
                 margin-right: 14px;
+                @include md {
+                    justify-content: start;
+                }
             }
 
             .info {
                 // border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                padding: 14px 0;
+                padding: 6px 0;
                 display: flex;
                 .infoItem {
                     // margin-right: 14px;
