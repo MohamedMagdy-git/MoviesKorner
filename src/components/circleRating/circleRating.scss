@@ -15,13 +15,13 @@ $border-color_1: #646cff;
 
 .circleRating {
     max-width: 50px;
-    background-color: var(--black);
+    background-color: $color_1;
     border-radius: 50%;
     padding: 4px;
     .CircularProgressbar-text {
         font-size: 34px;
         font-weight: 700;
-        fill: $color_2;
+        fill: $color_1;
     }
     .CircularProgressbar-trail {
         stroke: transparent;

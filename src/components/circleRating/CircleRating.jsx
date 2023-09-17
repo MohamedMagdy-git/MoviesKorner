@@ -11,10 +11,10 @@ const CircleRating = ({ rating }) => {
                 value={rating}
                 maxValue={10}
                 text={rating}
-                strokeWidth={5}
+                strokeWidth={8}
                 styles={buildStyles({
                     pathColor:
-                        rating < 5 ? "#846cfff3" : rating < 7 ? "#746cfff3" : "#646cfff3",
+                        rating < 5 ? "#e91e63" : rating < 7 ? "#ffc107" : "#4caf50",
                        
                 })}
             />

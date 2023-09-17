@@ -33,12 +33,12 @@ $border-color_1: #646cff;
     }
     .genre{
         z-index: 1;
-        background-color:#646cff74;
+        background-color:$background-color_2;
         padding: 3px;
         border-radius: 6px;
         width: fit-content;
         color: $color_1;
-        font-size: .7rem;
+        font-size: .8rem;
         font-weight: 500;
         white-space: nowrap;
         // background: #646cff;  /* fallback for old browsers */

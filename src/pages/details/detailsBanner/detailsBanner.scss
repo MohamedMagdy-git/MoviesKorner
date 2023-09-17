@@ -86,7 +86,7 @@ $border-color_1: #646cff;
                 font-size: 24px;
                 line-height: 32px;
                 font-weight: 900;
-                margin-bottom: 16px;
+                margin-bottom: 8px;
                 @include md {
                     font-size: 40px;
                     line-height: 40px;
@@ -118,11 +118,13 @@ $border-color_1: #646cff;
                 margin-bottom: 2rem;
                 .genree {
                     z-index: 1;
-                    background-color:#646cff74;
+                    background: $background-color_1;  
+                    // background: -webkit-linear-gradient(to left, #4A00E0, #646cff); 
+                    // background: linear-gradient(to left, #4b00e0, #646cff); 
                     padding: 3px;
                     border-radius: 6px;
                     width: fit-content;
-                    color: $color_6;
+                    color: $color_1;
                     font-size: 1rem;
                     white-space: nowrap;
                 }
@@ -135,37 +137,37 @@ $border-color_1: #646cff;
                     width: min-content;
                 }
                 .description {
-                    border-top: 3px solid #747bff;
+                    border-right: 3px solid #646cff;
                     font-size: 16px;
                     line-height: 26px;
                     font-weight: 700;
-                    background-color: #747bff56;
-                    width: fit-content;
-                    border-radius: 6px;
-                    text-align: center;
-                    color: #ebecff;
-                    padding: 5px;
-                    // max-width: 650px;
-        
-                    // padding-right: 5px;
+                    padding-right: 8px;
+                    
+                   
+                    
+                    color: #fff;
+                   
                     @include md {
-                        // margin-right: 100px;
-                        font-size: 24px;
-                        line-height: 38px;
+                      
+                        font-size: 20px;
+                        line-height: 34px;
                         padding-right: 10px;
-                        // border-top: 2px solid $color_2;
-                        border-radius: 6px;
+                       
+                        
                     }
                 }
             }
             .circleRating {
                 max-width: 40px;
-                background-color: #646cff74;
+                background: $background-color_1;  
+                    // background: -webkit-linear-gradient(to left, #4A00E0, #646cff); 
+                    // background: linear-gradient(to left, #4b00e0, #646cff); 
                 @include md {
                     max-width: 48px;
                 }
                 .CircularProgressbar-text {
-                    fill: $color_6;
+                    fill: $color_1;
+                    
                 }
             }
             .playbtn {
@@ -180,7 +182,7 @@ $border-color_1: #646cff;
                     }
                 }
                 .text {
-                    font-size: 16px;
+                    font-size: 20px;
                     line-height: 24px;
                     font-weight: 700;
                     transition: all 0.7s ease-in-out;
@@ -218,7 +220,7 @@ $border-color_1: #646cff;
                 display: flex;
                 align-items: center;
                 gap: 24px;
-                margin-bottom: 18px;
+                margin-right: 14px;
             }
 
             .info {
@@ -247,7 +249,7 @@ $border-color_1: #646cff;
                 }
                 .text {
                     margin-right: 14px;
-                    opacity: 0.6;
+                    opacity: 0.8;
                     line-height: 28px;
                     font-size: 14px;
                     @include md {
