@@ -307,16 +307,16 @@ const DetailsBanner = ({video, crew, rate}) => {
                                 )}  
                             
 
+
+                            </div>
+                           
+                        </div>
                             <div className="overview">
                                 {/* <div className="heading">القصة:</div> */}
                                 <div className="description">
                                     {data?.overview}
                                 </div>
                             </div>
-
-                            </div>
-                           
-                        </div>
                     <VideoPopup show={show} setShow={setShow} videoId={videoId} setVideoId={setVideoId}/>
                     </ContentWrapper>
                     </React.Fragment>
