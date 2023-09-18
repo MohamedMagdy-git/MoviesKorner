@@ -26,7 +26,7 @@ $border-color_1: #646cff;
     display: flex;
     align-items: center;
     transition: all ease 0.5s;
-    z-index: 2;
+    z-index: 100;
     &.top {
         background: rgb(9,10,20);
         background: linear-gradient(180deg, rgba(9, 10, 20, 0.515) 0%, rgba(36, 36, 36, 0) 100%);
