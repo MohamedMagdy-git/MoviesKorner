@@ -8,7 +8,7 @@ import Carousel from '../../../components/carousel/Carousel'
 
 
 const Trending = () => {
-  const [endPoint, SetEendPoint] = useState('week')
+  const [endPoint, SetEendPoint] = useState('day')
   const {data, loading} = useFetch(`/trending/all/${endPoint}?language=ar&include_adult=false&page=1`)
 
   const onTapChange = (tab) => {
@@ -18,7 +18,7 @@ const Trending = () => {
   return (
     <div className='carouselSection'>
         <ContentWrapper>
-            <SwitchTap data={['أسبوع','يـوم']} onTapChange={onTapChange}/>
+            <SwitchTap data={['يـوم','أسبوع']} onTapChange={onTapChange}/>
             <span className="carouseTitle"> رائج الان</span>
         </ContentWrapper>
         <Carousel data={data?.results} endPoint={endPoint} loading={loading}/>
