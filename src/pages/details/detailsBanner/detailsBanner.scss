@@ -135,11 +135,11 @@ $border-color_1: #646cff;
                 }
                 .genree {
                     z-index: 1;
-                    background: $background-color_1;  
+                    background: $color_2;  
                     // background: -webkit-linear-gradient(to left, #4A00E0, #646cff); 
                     // background: linear-gradient(to left, #4b00e0, #646cff); 
-                    padding: 3px;
-                    border-radius: 6px;
+                    padding: 8px;
+                    border-radius: 16px;
                     width: fit-content;
                     color: $color_1;
                     font-size: 1rem;
