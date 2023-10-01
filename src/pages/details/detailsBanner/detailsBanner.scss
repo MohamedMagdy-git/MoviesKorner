@@ -169,6 +169,7 @@ $border-color_1: #646cff;
                     padding-right: 8px;
                     color: #fff;
                    
+                   
                     @include md {
                         margin-top: 20px;
                         font-size: 20px;
@@ -322,6 +323,7 @@ $border-color_1: #646cff;
                 font-weight: 700;
                 padding-right: 8px;
                 color: #fff;
+                z-index: 1 !important;
                
                 @include md {
                     margin-top: 20px;
@@ -395,7 +397,7 @@ $border-color_1: #646cff;
         line-height: 24px;
         font-weight: 700;
         color: #fff;
-        z-index: 20;
+        z-index: 2;
         position: relative;
         padding: 0px 8px;
         right: 10;
