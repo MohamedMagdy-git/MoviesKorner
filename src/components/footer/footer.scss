@@ -65,9 +65,23 @@ $border-color_1: #646cff;
         width: 160px;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
+        margin-bottom: 25px;
         gap: 10px;
         .icon {
+            a {
+                color: #0088cc;
+                transition: .2s ease;
+                &:hover {
+                    // box-shadow: 0 0 0.625em $color_2;
+                    color: $color_2;
+                }
+            }
+            .text {
+                color: #f9f9f9;
+            }
+            line-height: 20px;
+            
             // width: 50px;
             // height: 50px;
             // border-radius: 50%;
@@ -77,10 +91,7 @@ $border-color_1: #646cff;
             justify-content: center;
             cursor: pointer;
             transition: all ease 0.3s;
-            &:hover {
-                // box-shadow: 0 0 0.625em $color_2;
-                color: $color_2;
-            }
+            
         }
     }
     .copyright {

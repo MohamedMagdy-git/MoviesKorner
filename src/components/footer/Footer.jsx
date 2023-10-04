@@ -4,6 +4,7 @@ import {
     FaInstagram,
     FaTwitter,
     FaLinkedin,
+    FaTelegram,
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import ContentWrapper from "../contentWrapper/ContentWrapper";
@@ -31,16 +32,16 @@ const Footer = () => {
                 </div>
                 <div className="socialIcons">
                     <span className="icon">
-                        <FaFacebookF />
+                        <a href="http://" target="_blank" rel="noopener noreferrer">
+
+                        <FaTelegram />
+                        </a>
                     </span>
                     <span className="icon">
-                        <FaInstagram />
-                    </span>
-                    <span className="icon">
-                        <FaTwitter />
-                    </span>
-                    <span className="icon">
-                        <FaLinkedin />
+                        <a className="text" href="http://" target="_blank" rel="noopener noreferrer">
+
+                    دوس هنــا عشــان تقدر تنزل المحتـوي وتدخل قناة تليجرام 
+                        </a>
                     </span>
                 </div>
                 <div className="copyright">
