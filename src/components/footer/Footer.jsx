@@ -32,13 +32,13 @@ const Footer = () => {
                 </div>
                 <div className="socialIcons">
                     <span className="icon">
-                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <a href="https://t.me/moviesKor" target="_blank" rel="noopener noreferrer">
 
                         <FaTelegram />
                         </a>
                     </span>
                     <span className="icon">
-                        <a className="text" href="http://" target="_blank" rel="noopener noreferrer">
+                        <a className="text" href="https://t.me/moviesKor" target="_blank" rel="noopener noreferrer">
 
                     دوس هنــا عشــان تقدر تنزل المحتـوي وتدخل قناة تليجرام 
                         </a>
