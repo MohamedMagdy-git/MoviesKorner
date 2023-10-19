@@ -34,6 +34,11 @@ $border-color_1: #646cff;
     --gradient: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
 }
 
+::selection {
+    color: #020c1b;
+    background: $color_3;
+  }
+
 * {
     margin: 0;
     padding: 0;
