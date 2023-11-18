@@ -70,7 +70,7 @@ const Carousel = ({data, loading, endPoint, title}) => {
                         || item.id === 654374 || item.id === 654374 || item.id === 537915 || item.id === 664413 || item.id === 664413
                         || item.id === 744275 || item.id === 613504 || item.id === 249397 || item.id === 337167
                         || item.id === 57084 || item.id === 346698 || item.id === 81318 || item.id === 729120 || item.id === 910571
-                        || item.id === 1173558 || item.id === 790459 || item.id === 760245){return;}
+                        || item.id === 1173558 || item.id === 790459 || item.id === 760245 || item.id === 1034940){return;}
                     const posterUrl = item.poster_path ? url.poster + item.poster_path : PosterFallback;
                    return(
                    <div key={item.id}
