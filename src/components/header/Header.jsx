@@ -3,7 +3,7 @@ import { HiOutlineSearch } from "react-icons/hi";
 import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
 import { useNavigate, useLocation } from "react-router-dom";
-
+import palestine from '../../assets/giphy.gif'
 import "./header.scss";
 
 import ContentWrapper from "../contentWrapper/ContentWrapper";
@@ -76,6 +76,7 @@ const Header = () => {
                 <div className="logo" onClick={() => navigate("/")}>
                     <img src={logo} alt="" />
                 </div>
+                <img className="palestineFlag" src={palestine} alt="free palestine" srcset="" />
                 <ul className="menuItems">
                     <li
                         className="menuItem"
@@ -93,6 +94,8 @@ const Header = () => {
                         <HiOutlineSearch onClick={openSearch} />
                     </li>
                 </ul>
+                
+
 
                 <div className="mobileMenuItems">
                     <HiOutlineSearch onClick={openSearch} />
