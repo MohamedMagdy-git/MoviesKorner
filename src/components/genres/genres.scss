@@ -2,7 +2,7 @@
 
 $color_0: rgb(255, 251, 251);
 $color_1: #f9f9f9;
-$color_2: #646cfff3;
+$color_2: #646cff;
 $color_3: #535bf2;
 $color_4: #213547;
 $color_5: #747bff;
@@ -23,9 +23,8 @@ $border-color_1: #646cff;
     flex-direction: row;
     flex-wrap:  wrap;
     gap: 6px;
-    // left: 2px;
-    margin-right: 4px;
-    margin-top: 4px;
+    margin-right: 0px;
+    margin-top: 0px;
     transition: .3s ease;
 
     @include md {
@@ -33,14 +32,16 @@ $border-color_1: #646cff;
     }
     .genre{
         z-index: 1;
-        background-color:$background-color_2;
-        padding: 3px;
-        border-radius: 6px;
+        background-color: #646cffd8;
+        padding: 4px 6px;
+        border-radius: 0px 10px;
+        backdrop-filter: blur(10px);
         width: fit-content;
         color: $color_1;
         font-size: .8rem;
-        font-weight: 500;
+        font-weight: 700;
         white-space: nowrap;
+        box-shadow: 1px 1px 16px 7px #020c1b52;;
         // background: #646cff;  /* fallback for old browsers */
         // background: -webkit-linear-gradient(to left, #4A00E0, #646cff);  /* Chrome 10-25, Safari 5.1-6 */
         // background: linear-gradient(to left, #4A00E0, #646cff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
