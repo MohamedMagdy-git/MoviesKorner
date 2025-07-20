@@ -9,7 +9,7 @@ import Carousel from '../../../components/carousel/Carousel'
 
 const Popular = () => {
   const [endPoint, SetEendPoint] = useState('movie')
-  const {data, loading} = useFetch(`/${endPoint}/popular?language=ar&include_adult=false&page=2`)
+  const {data, loading} = useFetch(`/${endPoint}/popular?language=ar&include_adult=false&page=1`)
 
   const onTapChange = (tab) => {
     SetEendPoint(tab === 'افلام' ? 'movie' : 'tv')
@@ -18,7 +18,7 @@ const Popular = () => {
   return (
     <div className='carouselSection'>
         <ContentWrapper>
-            <SwitchTap data={['افلام','مسلسلات']} onTapChange={onTapChange}/>
+            <SwitchTap data={['مسلسلات','افلام']} onTapChange={onTapChange}/>
             <span className="carouseTitle">شائع</span>
         </ContentWrapper>
         <Carousel data={data?.results} endPoint= {endPoint} loading={loading}/>
