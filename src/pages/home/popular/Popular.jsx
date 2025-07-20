@@ -8,7 +8,7 @@ import Carousel from '../../../components/carousel/Carousel'
 
 
 const Popular = () => {
-  const [endPoint, SetEendPoint] = useState('movie')
+  const [endPoint, SetEendPoint] = useState('tv')
   const {data, loading} = useFetch(`/${endPoint}/popular?language=ar&include_adult=false&page=1`)
 
   const onTapChange = (tab) => {
